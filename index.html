@@ -19,11 +19,33 @@
   <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <nav class="nav nav-left" aria-label="Hoofdnavigatie">
-        <a href="#">Home</a>
-        <a href="#producten">Assortiment</a>
-        <a href="#">Contact</a>
-      </nav>
+      <div class="header-left">
+        <div class="menu-wrap">
+          <button class="menu-btn" id="menuToggle" aria-haspopup="true" aria-expanded="false" aria-controls="leagueMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            <span>Menu</span>
+          </button>
+
+          <div class="league-menu" id="leagueMenu">
+            <p class="league-menu-label">Competities</p>
+            <ul>
+              <li><a href="#populair">Premier League</a></li>
+              <li><a href="#populair">Ligue 1</a></li>
+              <li><a href="#populair">Serie A</a></li>
+              <li><a href="#populair">LaLiga</a></li>
+              <li><a href="#populair">Bundesliga</a></li>
+              <li><a href="#populair">Eredivisie</a></li>
+              <li><a href="#populair">Retro</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="nav nav-left" aria-label="Hoofdnavigatie">
+          <a href="#">Home</a>
+          <a href="#populair">Assortiment</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
 
       <a href="#" class="logo">FOOTY4 <span>THE WORLD</span></a>
 
@@ -48,7 +70,7 @@
       <div class="hero-text">
         <h1>Elk shirt, <br />een wedstrijd waard</h1>
         <p>Officiële en retro voetbalshirts, zorgvuldig geselecteerd voor liefhebbers die kwaliteit en echtheid herkennen.</p>
-        <a href="#producten" class="btn btn-primary">Bekijk de shirts</a>
+        <a href="#populair" class="btn btn-primary">Bekijk de shirts</a>
       </div>
 
       <div class="hero-media">
@@ -61,10 +83,10 @@
     </section>
 
     <!-- Productgrid -->
-    <section class="products" id="producten">
+    <section class="products" id="populair">
       <div class="section-heading">
-        <h2>Producten</h2>
-        <p>Een selectie uit onze collectie</p>
+        <h2>Populaire items</h2>
+        <p>De shirts die onze klanten het vaakst kiezen</p>
       </div>
 
       <div class="product-grid">

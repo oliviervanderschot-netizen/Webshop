@@ -281,6 +281,51 @@ button {
   color: var(--color-accent);
 }
 
+.league-menu a[aria-current="page"] {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Category page header
+   ========================================================================== */
+
+.category-header {
+  border-bottom: 1px solid var(--color-line);
+  padding: 40px var(--gutter) 32px;
+}
+
+.category-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.category-header h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  margin-bottom: 10px;
+}
+
+.category-header p.category-intro {
+  max-width: 560px;
+  font-size: 15px;
+}
+
+.results-count {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
 /* ==========================================================================
    Buttons
    ========================================================================== */

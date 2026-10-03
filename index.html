@@ -3,340 +3,88 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Footy4theworld verkoopt officiële en retro voetbalshirts voor liefhebbers die kwaliteit en echtheid belangrijk vinden. Gratis verzending vanaf €75." />
-<title>Footy4theworld — Officiële &amp; Retro Voetbalshirts</title>
+<meta name="description" content="Footy4theworld: retro klassiekers en shirts van het nieuwe seizoen, zorgvuldig geselecteerd. Gratis verzending vanaf €75." />
+<title>Footy4theworld — Voetbalshirts met een verhaal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<script src="js/products.js" defer></script>
+<script src="js/app.js" defer></script>
 </head>
-<body>
-
-  <!-- Aankondigingsbalk -->
-  <div class="announcement-bar">
-    <p>The Home of Football ⚽</p>
-  </div>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-left">
-        <div class="menu-wrap">
-          <button class="menu-btn" id="menuToggle" aria-haspopup="true" aria-expanded="false" aria-controls="leagueMenu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-            <span>Menu</span>
-          </button>
-
-          <div class="league-menu" id="leagueMenu">
-            <p class="league-menu-label">Competities</p>
-            <ul>
-              <li><a href="premier-league.html">Premier League</a></li>
-              <li><a href="ligue-1.html">Ligue 1</a></li>
-              <li><a href="serie-a.html">Serie A</a></li>
-              <li><a href="laliga.html">LaLiga</a></li>
-              <li><a href="bundesliga.html">Bundesliga</a></li>
-              <li><a href="eredivisie.html">Eredivisie</a></li>
-              <li><a href="retro.html">Retro</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <nav class="nav nav-left" aria-label="Hoofdnavigatie">
-          <a href="#">Home</a>
-          <a href="#populair">Assortiment</a>
-          <a href="#">Contact</a>
-        </nav>
-      </div>
-
-      <a href="#" class="logo">Footy4theworld</a>
-
-      <div class="header-icons">
-        <button class="icon-btn" aria-label="Zoeken">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        <button class="icon-btn" aria-label="Account">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
-        </button>
-        <button class="icon-btn" aria-label="Winkelmandje">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6"/><circle cx="9.5" cy="20.5" r="1.2"/><circle cx="17" cy="20.5" r="1.2"/></svg>
-          <span class="cart-count">2</span>
-        </button>
-      </div>
-    </div>
-  </header>
+<body data-page="home">
+  <header id="site-header"></header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="hero-text">
-        <a href="#populair" class="btn btn-primary">Bekijk de shirts</a>
+        <p class="eyebrow">Collectie 2026</p>
+        <h1>Shirts met <em>een verhaal</em></h1>
+        <p class="lead">Van de finale in Athene tot het laatste seizoen op Highbury. Iconische voetbalshirts, zorgvuldig geselecteerd.</p>
+        <div class="hero-cta">
+          <a href="shop.html" class="btn btn-dark">Ontdek de collectie</a>
+          <a href="retro.html" class="btn btn-light">Retro</a>
+        </div>
       </div>
-
       <div class="hero-media">
-        <div class="hero-slideshow" role="img" aria-label="Voetbalshirt fotografie">
-          <img src="https://picsum.photos/seed/footyhero1/1000/1200" alt="" class="slide active" />
-          <img src="https://picsum.photos/seed/footyhero2/1000/1200" alt="" class="slide" />
-          <img src="https://picsum.photos/seed/footyhero3/1000/1200" alt="" class="slide" />
+        <figure><img src="images/products/arsenal-0506-thuis-henry-back.jpg" alt="Arsenal thuisshirt 2005/06 met Henry 14 op de rug" /></figure>
+        <figure><img src="images/products/ac-milan-0607-uit-kaka-back.jpg" alt="AC Milan uitshirt 2006/07 met Kaká 22 op de rug" /></figure>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <div><p class="eyebrow">Net binnen</p><h2>Nieuw <em>seizoen</em></h2></div>
+        <a href="shop.html?filter=nieuw" class="link-arrow">Bekijk alles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
+      </div>
+      <div class="product-grid" data-products="nieuw" data-limit="4"></div>
+    </section>
+
+    <section class="section container">
+      <div class="editorial">
+        <div class="editorial-media">
+          <img src="images/products/inter-0910-thuis-sneijder-back.jpg" alt="Inter thuisshirt 2009/10 met Sneijder 10" loading="lazy" />
+          <img src="images/products/fiorentina-9899-thuis-front.jpg" alt="Fiorentina thuisshirt 1998/99" loading="lazy" />
+        </div>
+        <div class="editorial-text">
+          <p class="eyebrow">De retro collectie</p>
+          <h2>Avonden die je <em>nooit vergeet</em></h2>
+          <p>Madrid 2010. Athene 2007. Het paars van Florence in de jaren negentig. Shirts met finalebedrukking, originele sponsors en de details die ze onvergetelijk maakten.</p>
+          <a href="retro.html" class="btn btn-dark">Shop retro</a>
         </div>
       </div>
     </section>
 
-    <!-- Vertrouwen / USP's -->
-    <section class="usp-bar" aria-label="Waarom Footy4theworld">
-      <ul>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16V7a1 1 0 0 1 1-1h11v10"/><path d="M16 10h3l2 3v3h-5"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
-          <span>Gratis verzending vanaf €75</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
-          <span>100% officieel &amp; echt</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
-          <span>30 dagen retourneren</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg>
-          <span>Veilig betalen</span>
-        </li>
-      </ul>
+    <section class="section container">
+      <div class="section-head">
+        <div><p class="eyebrow">Klassiekers</p><h2>Retro <em>favorieten</em></h2></div>
+        <a href="retro.html" class="link-arrow">Alle retro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
+      </div>
+      <div class="product-grid" data-products="retro" data-limit="8"></div>
     </section>
 
-    <!-- Productgrid -->
-    <section class="products" id="populair">
-      <div class="section-heading">
-        <h2>Populaire items</h2>
-        <p>De shirts die onze klanten het vaakst kiezen</p>
+    <section class="section container">
+      <div class="section-head">
+        <div><p class="eyebrow">Shop per competitie</p><h2>Competities</h2></div>
       </div>
-
-      <div class="product-grid">
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Bestseller</span>
-            <a href="#"><img src="https://picsum.photos/seed/shirt1/600/720" alt="Nederland Thuisshirt 2024" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Nederland Thuisshirt 2024</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 89,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating-count">(203)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <a href="#"><img src="https://picsum.photos/seed/shirt2/600/720" alt="Argentinië Retro 1986" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Argentinië Retro 1986</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 79,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.8 <span class="rating-count">(96)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <a href="#"><img src="https://picsum.photos/seed/shirt3/600/720" alt="Brazilië Uitshirt Retro 1970" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Brazilië Uitshirt Retro 1970</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 84,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.7 <span class="rating-count">(54)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Bestseller</span>
-            <a href="#"><img src="https://picsum.photos/seed/shirt4/600/720" alt="Real Madrid Thuisshirt" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Real Madrid Thuisshirt</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 94,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating-count">(261)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <a href="#"><img src="https://picsum.photos/seed/shirt5/600/720" alt="Manchester United Retro 1999" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Manchester United Retro 1999</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 99,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.8 <span class="rating-count">(177)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <a href="#"><img src="https://picsum.photos/seed/shirt6/600/720" alt="AC Milan Thuisshirt" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">AC Milan Thuisshirt</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 89,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.6 <span class="rating-count">(68)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Nieuw</span>
-            <a href="#"><img src="https://picsum.photos/seed/shirt7/600/720" alt="Duitsland Uitshirt 2014" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Duitsland Uitshirt 2014</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 86,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.7 <span class="rating-count">(41)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <a href="#"><img src="https://picsum.photos/seed/shirt8/600/720" alt="FC Barcelona Retro 1992" loading="lazy" /></a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">FC Barcelona Retro 1992</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 82,95</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating-count">(188)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Nieuw</span>
-            <a href="#">
-              <img src="images/real-madrid-uitshirt-2526.jpg" alt="Real Madrid Uitshirt 2026/27 Kylian Mbappé" loading="lazy" />
-              <img class="shirt-back" src="images/real-madrid-uitshirt-2627-mbappe-back.jpg" alt="Real Madrid Uitshirt 2026/27 Kylian Mbappé — achterkant" loading="lazy" />
-            </a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Real Madrid Uitshirt 2026/27 Kylian Mbappé</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 25,00</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating-count">(37)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Nieuw</span>
-            <a href="#">
-              <img src="images/fc-barcelona-special-edition.jpg" alt="FC Barcelona 3rd kit 2026/27 Frenkie de Jong" loading="lazy" />
-              <img class="shirt-back" src="images/fc-barcelona-3rd-2627-de-jong-back.jpg" alt="FC Barcelona 3rd kit 2026/27 Frenkie de Jong — achterkant" loading="lazy" />
-            </a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">FC Barcelona 3rd kit 2026/27 Frenkie de Jong</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 25,00</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.8 <span class="rating-count">(29)</span></p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-image">
-            <span class="product-badge">Nieuw</span>
-            <a href="#">
-              <img src="images/newcastle-united-thuisshirt-2425.jpg" alt="Newcastle United Thuisshirt 2026/27 Sean Steur" loading="lazy" />
-              <img class="shirt-back" src="images/newcastle-united-thuisshirt-2627-steur-back.jpg" alt="Newcastle United Thuisshirt 2026/27 Sean Steur — achterkant" loading="lazy" />
-            </a>
-            <button class="quick-add" type="button">+ Toevoegen</button>
-          </div>
-          <h3 class="product-title"><a href="#">Newcastle United Thuisshirt 2026/27 Sean Steur</a></h3>
-          <div class="product-meta">
-            <p class="product-price">€ 25,00</p>
-            <p class="product-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.7 <span class="rating-count">(22)</span></p>
-          </div>
-        </article>
-
-      </div>
+      <nav class="league-list" aria-label="Competities">
+        <a href="premier-league.html"><span class="name">Premier League</span><span class="meta">Engeland</span></a>
+        <a href="serie-a.html"><span class="name">Serie A</span><span class="meta">Italië</span></a>
+        <a href="laliga.html"><span class="name">LaLiga</span><span class="meta">Spanje</span></a>
+        <a href="ligue-1.html"><span class="name">Ligue 1</span><span class="meta">Frankrijk</span></a>
+      </nav>
     </section>
 
-    <!-- Social proof -->
-    <section class="reviews" aria-label="Klantbeoordelingen">
-      <div class="section-heading">
-        <h2>Wat klanten zeggen</h2>
-        <p>Gemiddeld 4.8 uit 5, op basis van 1.240 beoordelingen</p>
-      </div>
-
-      <div class="review-grid">
-        <article class="review-card">
-          <p class="stars" aria-hidden="true">★★★★★</p>
-          <p class="review-text">"Shirt was 1-op-1 hetzelfde als in de winkel. Snelle levering en netjes verpakt."</p>
-          <p class="review-author">Sander V. — Geverifieerde koper</p>
-        </article>
-
-        <article class="review-card">
-          <p class="stars" aria-hidden="true">★★★★★</p>
-          <p class="review-text">"Eindelijk een webshop waar je zeker weet dat de retro shirts echt zijn. Kwaliteit is top."</p>
-          <p class="review-author">Mireille D. — Geverifieerde koper</p>
-        </article>
-
-        <article class="review-card">
-          <p class="stars" aria-hidden="true">★★★★★</p>
-          <p class="review-text">"Retour ging binnen een paar dagen zonder gedoe. Kom hier zeker voor mijn volgende shirt terug."</p>
-          <p class="review-author">Youssef E. — Geverifieerde koper</p>
-        </article>
+    <section class="section container">
+      <div class="service">
+        <div><h3>Gratis verzending</h3><p>Op bestellingen vanaf €75</p></div>
+        <div><h3>30 dagen retour</h3><p>Kosteloos en zonder gedoe</p></div>
+        <div><h3>Veilig betalen</h3><p>iDEAL, creditcard en PayPal</p></div>
+        <div><h3>Persoonlijk advies</h3><p>Hulp bij maat en bedrukking</p></div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-newsletter">
-      <h2>Join our email list</h2>
-      <p>Ontvang 10% korting op je eerste bestelling en blijf als eerste op de hoogte van nieuwe drops en restocks.</p>
-      <form class="newsletter-form" onsubmit="return false;">
-        <label for="newsletter-email" class="visually-hidden">E-mailadres</label>
-        <input id="newsletter-email" type="email" placeholder="E-mailadres" required />
-        <button type="submit" aria-label="Aanmelden">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
-        </button>
-      </form>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-links">
-        <a href="#">Verzending</a>
-        <a href="#">Retourbeleid</a>
-        <a href="#">Algemene voorwaarden</a>
-        <a href="#">Privacybeleid</a>
-      </div>
-
-      <div class="footer-social">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-        </a>
-        <a href="#" aria-label="X / Twitter">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V6h-3a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9a1 1 0 0 1 1-1Z"/></svg>
-        </a>
-      </div>
-
-      <p class="footer-copy">© 2026 Footy4theworld. Alle rechten voorbehouden.</p>
-    </div>
-
-    <div class="footer-payments">
-      <span>iDEAL</span>
-      <span>Visa</span>
-      <span>Mastercard</span>
-      <span>PayPal</span>
-      <span>Apple Pay</span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer id="site-footer"></footer>
 </body>
 </html>

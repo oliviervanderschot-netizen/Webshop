@@ -1,0 +1,216 @@
+// Productcatalogus — pas hier namen, prijzen en teksten aan.
+// Afbeeldingen staan in images/products/<id>-front.jpg, -back.jpg en -details.jpg.
+
+const LEAGUES = {
+  "premier-league": "Premier League",
+  "serie-a": "Serie A",
+  "laliga": "LaLiga",
+  "ligue-1": "Ligue 1",
+  "bundesliga": "Bundesliga",
+  "eredivisie": "Eredivisie",
+};
+
+const PRODUCTS = [
+  {
+    id: "real-madrid-2627-uit-mbappe",
+    club: "Real Madrid",
+    name: "Uitshirt 2026/27",
+    player: "Mbappé 10",
+    season: "2026/27",
+    league: "laliga",
+    retro: false,
+    sleeve: "Korte mouw",
+    price: 25,
+    badge: "Nieuw",
+    details: false,
+    description:
+      "Het witte uitshirt van Real Madrid voor 2026/27, met groene kraag en manchetten en de karakteristieke roze schouderstrepen. Bedrukt met Kylian Mbappé en rugnummer 10.",
+    features: ["Bedrukking Mbappé 10", "Geborduurd clubembleem", "Ademende, lichte stof", "Korte mouw"],
+  },
+  {
+    id: "fc-barcelona-2627-third-de-jong",
+    club: "FC Barcelona",
+    name: "Third shirt 2026/27",
+    player: "F. de Jong 21",
+    season: "2026/27",
+    league: "laliga",
+    retro: false,
+    sleeve: "Korte mouw",
+    price: 25,
+    badge: "Nieuw",
+    details: false,
+    description:
+      "Het third shirt van FC Barcelona: diep zwart dat overloopt in paars, afgewerkt met gouden details. Bedrukt met Frenkie de Jong en rugnummer 21.",
+    features: ["Bedrukking F. de Jong 21", "Gouden nummering", "Paarse kleurverloop", "Korte mouw"],
+  },
+  {
+    id: "newcastle-2627-thuis-steur",
+    club: "Newcastle United",
+    name: "Thuisshirt 2026/27",
+    player: "Steur 14",
+    season: "2026/27",
+    league: "premier-league",
+    retro: false,
+    sleeve: "Korte mouw",
+    price: 25,
+    badge: "Nieuw",
+    details: false,
+    description:
+      "De zwart-witte streep van Newcastle United in een eigentijdse uitvoering, met hemelsblauwe accenten op schouders en manchetten. Bedrukt met Sean Steur en rugnummer 14.",
+    features: ["Bedrukking Steur 14", "Premier League-nummering", "Blauwe accenten", "Korte mouw"],
+  },
+  {
+    id: "psg-2425-thuis-ls",
+    club: "Paris Saint-Germain",
+    name: "Thuisshirt 2024/25",
+    player: null,
+    season: "2024/25",
+    league: "ligue-1",
+    retro: false,
+    sleeve: "Lange mouw",
+    price: 25,
+    badge: null,
+    details: true,
+    description:
+      "Het klassieke Hechter-ontwerp: rode baan, witte biezen en Parijs-blauw. Uitgevoerd met lange mouwen en de tekst 'Fiers de nos couleurs' in de kraag.",
+    features: ["Lange mouw", "Geborduurd clubembleem met twee sterren", "Driekleurige manchetten", "Zonder bedrukking"],
+  },
+  {
+    id: "ac-milan-0607-uit-kaka",
+    club: "AC Milan",
+    name: "Uitshirt 2006/07",
+    player: "Kaká 22",
+    season: "2006/07",
+    league: "serie-a",
+    retro: true,
+    sleeve: "Lange mouw",
+    price: 35,
+    badge: "Finale Athene",
+    details: true,
+    description:
+      "Het witte uitshirt dat AC Milan droeg in de Champions League-finale van Athene, 23 mei 2007. Met finalebadge, Champions League-mouwlogo's en Kaká 22 op de rug.",
+    features: ["Matchdetails finale Athene 2007", "Champions League-badges", "'Rossoneri' in de nek", "Lange mouw"],
+  },
+  {
+    id: "inter-0910-thuis-sneijder",
+    club: "Inter",
+    name: "Thuisshirt 2009/10",
+    player: "Sneijder 10",
+    season: "2009/10",
+    league: "serie-a",
+    retro: true,
+    sleeve: "Lange mouw",
+    price: 35,
+    badge: "Finale Madrid",
+    details: true,
+    description:
+      "Het nerazzurri-thuisshirt van het treble-seizoen, met de finalebedrukking van Madrid, 22 mei 2010. Wesley Sneijder 10 op de rug.",
+    features: ["Matchdetails finale Madrid 2010", "Champions League- en Respect-badges", "Bedrukking Sneijder 10", "Lange mouw"],
+  },
+  {
+    id: "arsenal-0506-thuis-henry",
+    club: "Arsenal",
+    name: "Thuisshirt 2005/06",
+    player: "Henry 14",
+    season: "2005/06",
+    league: "premier-league",
+    retro: true,
+    sleeve: "Lange mouw",
+    price: 35,
+    badge: null,
+    details: true,
+    description:
+      "Het bordeauxrode afscheidsshirt van Highbury (1913–2006), met gouden belettering en de 'Highbury 1913–2006'-tekst op de rug. Thierry Henry 14.",
+    features: ["Highbury-jubileumembleem", "Gouden bedrukking Henry 14", "Polokraag", "Lange mouw"],
+  },
+  {
+    id: "man-united-0708-uit-ronaldo",
+    club: "Manchester United",
+    name: "Uitshirt 2007/08",
+    player: "Ronaldo 7",
+    season: "2007/08",
+    league: "premier-league",
+    retro: true,
+    sleeve: "Lange mouw",
+    price: 35,
+    badge: null,
+    details: true,
+    description:
+      "Het zwarte uitshirt van het dubbelseizoen 2007/08, met rode biezen en Premier League Champions-badges. Cristiano Ronaldo 7.",
+    features: ["Premier League Champions-badges", "Bedrukking Ronaldo 7", "Rode accenten", "Lange mouw"],
+  },
+  {
+    id: "real-madrid-1213-third-benzema",
+    club: "Real Madrid",
+    name: "Third shirt 2012/13",
+    player: "Benzema 9",
+    season: "2012/13",
+    league: "laliga",
+    retro: true,
+    sleeve: "Lange mouw",
+    price: 35,
+    badge: null,
+    details: true,
+    description:
+      "Het donkergroene third shirt van Real Madrid in Champions League-uitvoering, met de '9'-titelbadge en zilveren strepen. Karim Benzema 9.",
+    features: ["Champions League- en titelbadge", "Bedrukking Benzema 9", "Zilveren strepen", "Lange mouw"],
+  },
+  {
+    id: "ac-milan-1112-third-seedorf",
+    club: "AC Milan",
+    name: "Third shirt 2011/12",
+    player: "Seedorf 10",
+    season: "2011/12",
+    league: "serie-a",
+    retro: true,
+    sleeve: "Korte mouw",
+    price: 35,
+    badge: null,
+    details: true,
+    description:
+      "Zwart third shirt met polokraag, gouden embleem en een tricolore borstbies. In Champions League-uitvoering met Clarence Seedorf 10.",
+    features: ["Gouden clubembleem", "'Associazione Calcio Milan' in de nek", "Champions League-badges", "Korte mouw"],
+  },
+  {
+    id: "fiorentina-9899-thuis",
+    club: "Fiorentina",
+    name: "Thuisshirt 1998/99",
+    player: null,
+    season: "1998/99",
+    league: "serie-a",
+    retro: true,
+    sleeve: "Korte mouw",
+    price: 35,
+    badge: null,
+    details: true,
+    description:
+      "Het iconische paarse shirt uit het Batistuta-tijdperk, met de Nintendo-sponsor en de witte blokken over de schouders.",
+    features: ["Paars met witte schouderblokken", "Geborduurd embleem", "Polokraag", "Korte mouw"],
+  },
+  {
+    id: "fiorentina-9899-thuis-ls",
+    club: "Fiorentina",
+    name: "Thuisshirt 1998/99 — lange mouw",
+    player: null,
+    season: "1998/99",
+    league: "serie-a",
+    retro: true,
+    sleeve: "Lange mouw",
+    price: 35,
+    badge: null,
+    details: true,
+    description:
+      "Dezelfde paarse klassieker met Nintendo-sponsor, uitgevoerd met lange mouwen en driekleurige manchetten.",
+    features: ["Paars met witte schouderblokken", "Driekleurige manchetten", "Polokraag", "Lange mouw"],
+  },
+];
+
+const SIZES = ["S", "M", "L", "XL", "XXL"];
+
+function productImages(p) {
+  const base = `images/products/${p.id}`;
+  const imgs = [`${base}-front.jpg`, `${base}-back.jpg`];
+  if (p.details) imgs.push(`${base}-details.jpg`);
+  if (p.id === "inter-0910-thuis-sneijder") imgs.push(`${base}-crest.jpg`);
+  return imgs;
+}
